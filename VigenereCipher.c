@@ -12,7 +12,7 @@
 
 
 int main (){
-    // Define the variables be require based on formula and logic in C programming
+    // Define the variables required based on formula and logic in C programming
     char text[500], key[500], encrypted_text[500], decrypted_text[500]; 
     int i, j = 0, textLength, keyLength, userChoice = 0;                   
 
