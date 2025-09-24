@@ -37,6 +37,7 @@ This program provides a simple and functional example of the Vigenère cipher, a
 **Decryption formula:**
 - Plaintext = (Ciphertext[i] - Key[i] + 26) mod 26
 
+---
 
 ## Caesar Cipher in C
 The **Caesar Cipher** is one of the simplest and most widely known encryption techniques. Each letter in the plaintext is shifted a fixed number of positions down the alphabet.
@@ -55,7 +56,6 @@ This program provides a simple implementation in **C** that allows you to **encr
 4. Non-letter characters remain unchanged.
 5. The output is the encrypted or decrypted text.
 
----
 
 **Encryption formula:**  
 - Ciphertext = (Plaintext[i] + Key) mod 26
