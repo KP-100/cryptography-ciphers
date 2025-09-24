@@ -4,6 +4,9 @@ This repository contains implementations of classical cryptography ciphers in **
 Currently implemented:
 - [Vigenère Cipher](#vigenère-cipher-in-c)
 
+In progress:
+- [Caesar Cipher](#caesar-cipher-in-c)
+
 
 ---
 
@@ -39,3 +42,29 @@ This program provides a simple and functional example of the Vigenère cipher, a
 **Resources**
 - [Vigenere Cipher Wikipedia](https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher)
 - [Vigenere Cipher GeeksforGeeks](https://www.geeksforgeeks.org/dsa/vigenere-cipher/)
+
+---
+
+## Caesar Cipher 
+The **Caesar Cipher** is one of the simplest and most widely known encryption techniques. Each letter in the plaintext is shifted a fixed number of positions down the alphabet.
+
+This program provides a simple implementation in **C** that allows you to **encrypt** and **decrypt** text using a numeric key.
+
+### Features
+- Encrypt plaintext with a numeric key (0–25)
+- Decrypt ciphertext with the same key
+- Non-alphabet characters are preserved
+
+### How It Works
+1. User provides a text message.
+2. User provides a numeric key (0–25).
+3. Each letter in the text is shifted by the key.
+4. Non-letter characters remain unchanged.
+5. The output is the encrypted or decrypted text.
+
+**Encryption formula:**  
+- Ciphertext = (Plaintext[i] + Key) mod 26
+
+**Decryption formula:**  
+- Plaintext = (Ciphertext[i] - Key + 26) mod 26
+
