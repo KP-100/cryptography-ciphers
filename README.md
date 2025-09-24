@@ -1,6 +1,9 @@
 # Cryptography Ciphers
 
-This repository contains implementations of classical cryptography ciphers in **C**.  
+This repository contains implementations of classical cryptography ciphers in **C**.
+All ciphers in this repository are a basic implementation. Advanced version of them
+will arrive in near future.
+
 Currently implemented:
 - [Vigenère Cipher](#vigenère-cipher-in-c)
 
