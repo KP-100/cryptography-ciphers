@@ -45,7 +45,7 @@ This program provides a simple and functional example of the Vigenère cipher, a
 
 ---
 
-## Caesar Cipher 
+## Caesar Cipher in C
 The **Caesar Cipher** is one of the simplest and most widely known encryption techniques. Each letter in the plaintext is shifted a fixed number of positions down the alphabet.
 
 This program provides a simple implementation in **C** that allows you to **encrypt** and **decrypt** text using a numeric key.
