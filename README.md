@@ -33,6 +33,8 @@ This program provides a simple and functional example of the Vigenère cipher, a
 **Decryption formula:**
 - Plaintext = (Ciphertext[i] - Key[i] + 26) mod 26
 
+---
+
 **Resources**
 - [Vigenere Cipher Wikipedia](https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher)
 - [Vigenere Cipher GeeksforGeeks](https://www.geeksforgeeks.org/dsa/vigenere-cipher/)
