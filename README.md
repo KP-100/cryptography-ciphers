@@ -12,14 +12,14 @@ The **Vigenère Cipher** is a classical method of encrypting alphabetic text by 
 
 This program provides a simple and functional example of the Vigenère cipher, allowing you to **encrypt** and **decrypt** text.
 
----
+
 
 ### Features
 - Encrypt plaintext using a keyword
 - Decrypt ciphertext using the same keyword
 - Non-alphabet characters are ignored
 
----
+
 
 ### How It Works
 1. User provides a text message.
