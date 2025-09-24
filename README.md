@@ -57,17 +57,19 @@ This program provides a simple implementation in **C** that allows you to **encr
 
 ---
 
+**Encryption formula:**  
+- Ciphertext = (Plaintext[i] + Key) mod 26
+
+**Decryption formula:**  
+- Plaintext = (Ciphertext[i] - Key + 26) mod 26
+
+
+---
+
 **Resources**
 - [Vigenere Cipher Wikipedia](https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher)
 - [Vigenere Cipher GeeksforGeeks](https://www.geeksforgeeks.org/dsa/vigenere-cipher/)
 - [Caesar Cipher Wikipedia](https://en.wikipedia.org/wiki/Caesar_cipher)
 - [Caesar Cipher Splunk](https://www.splunk.com/en_us/blog/learn/caesar-cipher.html)
 
----
-
-**Encryption formula:**  
-- Ciphertext = (Plaintext[i] + Key) mod 26
-
-**Decryption formula:**  
-- Plaintext = (Ciphertext[i] - Key + 26) mod 26
 
