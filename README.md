@@ -2,7 +2,8 @@
 
 This repository contains implementations of classical cryptography ciphers in **C**.  
 Currently implemented:
-- Vigenère Cipher
+- [Vigenère Cipher](#vigenère-cipher-in-c)
+
 
 ---
 
