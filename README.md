@@ -6,9 +6,10 @@ will arrive in near future.
 
 Currently implemented:
 - [Vigenère Cipher](#vigenère-cipher-in-c)
+- [Caesar Cipher](#caesar-cipher-in-c)
 
 In progress:
-- [Caesar Cipher](#caesar-cipher-in-c)
+- More ciphers
 
 
 ---
