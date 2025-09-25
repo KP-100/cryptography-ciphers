@@ -1,7 +1,7 @@
 # Cryptography Ciphers
 
 This repository contains implementations of classical cryptography ciphers in **C**.
-All ciphers in this repository are a basic implementation. Advanced version of them
+All ciphers in this repository are a basic implementation focused on learning rather than perfect production grade ciphers. Advanced version of them
 will arrive in near future.
 
 Currently implemented:
