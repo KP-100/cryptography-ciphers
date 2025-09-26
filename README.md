@@ -12,7 +12,8 @@ Currently implemented:
 - [ROT13 Cipher](#ROT13-Cipher-in-C)
 
 In progress:
-- More ciphers
+- XOR Cipher
+- Mode Operation
 
 
 ---
