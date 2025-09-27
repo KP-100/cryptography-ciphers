@@ -10,9 +10,9 @@ Currently implemented:
 - [Vigenère Cipher](#vigenère-cipher-in-c)
 - [Caesar Cipher](#caesar-cipher-in-c)
 - [ROT13 Cipher](#ROT13-Cipher-in-C)
+- [XOR Cipher](#XOR-Cipher-in-C)
 
 In progress:
-- XOR Cipher
 - Mode Operation
 
 
@@ -102,6 +102,38 @@ This program provides a minimal implementation in C that allows you to "encrypt"
 **Decryption formula:**  
 - Plaintext = (Ciphertext[i] + ROT13) mod 26
 
+---
+# XOR Cipher in C
+
+The XOR Cipher is a simple method of encrypting text using the bitwise XOR operation.  
+Each character of the plaintext is XOR-ed with a corresponding character of the keyword (repeated as needed).
+
+This program provides a simple and functional example of the XOR cipher, allowing you to encrypt and decrypt text.
+
+---
+
+## Features
+- Encrypt plaintext using a keyword
+- Decrypt ciphertext using the same keyword
+- Encrypted text is displayed in hexadecimal format
+- Works with any character input (not limited to alphabetic text)
+
+---
+
+## How It Works
+1. User provides a text message.
+2. User provides a keyword.
+3. Each character in the text is XOR-ed with the corresponding character of the keyword (key repeats if shorter than text).
+4. Encrypted output is displayed as hexadecimal.
+5. Decryption works by applying XOR again with the same key.
+
+---
+
+## Encryption Formula
+- Ciphertext[i] = Plaintext[i] XOR Key[i% KeyLength]
+
+## Decryption Formula
+- Plaintext[i] = Ciphertext[i] XOR Key[i % KeyLength]
 
 ---
 
@@ -111,5 +143,6 @@ This program provides a minimal implementation in C that allows you to "encrypt"
 - [Caesar Cipher Wikipedia](https://en.wikipedia.org/wiki/Caesar_cipher)
 - [Caesar Cipher Splunk](https://www.splunk.com/en_us/blog/learn/caesar-cipher.html)
 - [ROT13 Cipher Wikipedia](https://en.wikipedia.org/wiki/ROT13)
+- [XOR Cipher Wikipedia](https://en.wikipedia.org/wiki/XOR_cipher)
 
 
