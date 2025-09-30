@@ -13,7 +13,7 @@ Currently implemented:
 - [XOR Cipher](#XOR-Cipher-in-C)
 
 In progress:
-- Affinw Cipher
+- Affine Cipher
 
 
 ---
