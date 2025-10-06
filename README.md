@@ -2,7 +2,7 @@
 
 ## Overview
 - This repository contains implementations of classical cryptography ciphers in **C**.
-All ciphers in this repository are a basic implementation focused on learning rather than perfect production grade ciphers. Upgrades to implemented ciphers will take place when I develop more skills in C. Advanced version of them will arrive in near future.
+All ciphers in this repository are a basic implementation focused for learning rather than perfect production-grade ciphers. Upgrades to implemented ciphers will take place when I develop more skills in C. Advanced version of them will arrive in near future.
 - I am also open to any feedback / improvements / and new ideas!
 
 
@@ -11,9 +11,10 @@ Currently implemented:
 - [Caesar Cipher](#caesar-cipher-in-c)
 - [ROT13 Cipher](#ROT13-Cipher-in-C)
 - [XOR Cipher](#XOR-Cipher-in-C)
+- [Affine Cipher](#Affine-Cipher-in-C)
 
 In progress:
-- Affine Cipher
+- More Cipher soon.
 
 
 ---
@@ -137,6 +138,44 @@ This program provides a simple and functional example of the XOR cipher, allowin
 
 ---
 
+# Affine Cipher in C
+
+The **Affine Cipher** is a type of monoalphabetic substitution cipher that combines both **multiplicative** and **additive** transformations. Each letter in the plaintext is encrypted using two keys: a **key multiplier (`a`)** and a **key (`b`)**.
+
+This program provides a simple and interactive implementation in **C**, allowing you to encrypt and decrypt text using the Affine Cipher.
+
+---
+
+## Features
+- Encrypt plaintext using keys `a` (key multiplier) and `b` (key)
+- Decrypt ciphertext using the same keys
+- Validates that the key multiplier has a modular inverse (ensuring decryption is possible)
+- Preserves non-alphabet characters (spaces, punctuation, etc.)
+- Handles both uppercase and lowercase letters
+- Interactive menu with options for encryption, decryption, and exiting
+
+---
+
+## How It Works
+1. User selects an option (Encrypt, Decrypt, or Exit).  
+2. User provides a text message.  
+3. User provides two integer keys:
+   - **Key Multiplier (`a`)** – must have a modular inverse modulo 26  
+   - **Key (`b`)** – additive key between 0–25  
+4. Each alphabetic character is converted to a number (A=0, B=1, …, Z=25).  
+5. The cipher applies modular arithmetic to perform encryption or decryption.  
+6. Non-letter characters remain unchanged.  
+7. The output is displayed on the screen.
+
+---
+
+## Encryption formula
+- Ciphertext = (a * Plaintext[i] + b) mod 26
+
+## Decryption formula
+- Plaintext = a inverse * (Ciphertext[i] - b + 26) mod 26
+
+---
 **Resources**
 - [Vigenere Cipher Wikipedia](https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher)
 - [Vigenere Cipher GeeksforGeeks](https://www.geeksforgeeks.org/dsa/vigenere-cipher/)
@@ -144,5 +183,6 @@ This program provides a simple and functional example of the XOR cipher, allowin
 - [Caesar Cipher Splunk](https://www.splunk.com/en_us/blog/learn/caesar-cipher.html)
 - [ROT13 Cipher Wikipedia](https://en.wikipedia.org/wiki/ROT13)
 - [XOR Cipher Wikipedia](https://en.wikipedia.org/wiki/XOR_cipher)
+- [Affine Cipher Wikipedia](https://en.wikipedia.org/wiki/Affine_cipher)
 
 
