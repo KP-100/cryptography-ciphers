@@ -14,7 +14,7 @@ Currently implemented:
 - [Affine Cipher](#Affine-Cipher-in-C)
 
 In progress:
-- More Cipher soon.
+- Hill Cipher
 
 
 ---
