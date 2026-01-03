@@ -14,7 +14,7 @@ Currently implemented:
 - [Affine Cipher](#Affine-Cipher-in-C)
 
 In progress:
-- Hill Cipher
+- Hill Cipher (With File I/O instead of Standard I/O).
 
 
 ---
