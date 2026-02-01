@@ -14,7 +14,8 @@ Currently implemented:
 - [Affine Cipher](#Affine-Cipher-in-C)
 
 In progress:
-- Hill Cipher (With File I/O instead of Standard I/O).
+- Upgrading each ciphers to allocate memory on runtime.
+- ETA (3/1/26)
 
 
 ---
