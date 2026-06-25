@@ -13,10 +13,6 @@ Currently implemented:
 - [XOR Cipher](#XOR-Cipher-in-C)
 - [Affine Cipher](#Affine-Cipher-in-C)
 
-In progress:
-- Upgrading each ciphers to allocate memory on runtime.
-- ETA (3/1/26)
-
 
 ---
 
