@@ -228,6 +228,7 @@ int main(){
     printf("\n***************************************");
     printf("\nGoodbye!\n");
 
+    // free the used memory
     free(data->text);
     free(data->encryptedText);
     free(data->decryptedText);
