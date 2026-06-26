@@ -2,7 +2,8 @@
 
 ## Overview
 - This repository contains implementations of classical cryptography ciphers in **C**.
-All ciphers in this repository are a basic implementation focused for learning rather than perfect production-grade ciphers. Upgrades to implemented ciphers will take place when I develop more skills in C. Advanced version of them will arrive in near future.
+All ciphers in this repository are a basic implementation focused for learning rather than perfect production-grade ciphers.
+- Advanced C concpets have been implemented in Better filename versions. These concepts include DMA, Pointers, and Structs.
 - I am also open to any feedback / improvements / and new ideas!
 
 
