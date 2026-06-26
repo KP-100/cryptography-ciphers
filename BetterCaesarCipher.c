@@ -134,7 +134,7 @@ int main(){
             
         }
 
-        // User Option 2
+        // User Option 2 
         else if(userInput == 2){
             printf("\nEnter Encrypted Text: ");
             char tempArr[MAXSIZE];
