@@ -28,7 +28,7 @@ char* encryption(char* input, int len, int key){
         return NULL;
     }
     for(int i = 0; i < len ; i++){
-        if((input[i] >= 'A' && input[i] <= 'Z') || input[i] >= 'a' && input[i] <= 'z'){ 
+        if((input[i] >= 'A' && input[i] <= 'Z') || (input[i] >= 'a' && input[i] <= 'z')){ 
             char upperCase = toupper(input[i]);
             encryptionText[i] = ((upperCase - 'A' + key) % 26) + 'A';
         } 
@@ -45,8 +45,12 @@ char* encryption(char* input, int len, int key){
 // NOTE: This also returns normal text in all UPPER case.
 char* decryption(char* output, int len, int key){
     char* decryptionText = malloc((len + 1) * sizeof(char));
+    if(decryptionText == NULL){
+        printf("\nMemory Allocation Failed.");
+        return NULL;
+    }
         for(int i = 0; i < len ; i++){
-            if((output[i] >= 'A' && output[i] <= 'Z') || output[i] >= 'a' && output[i] <= 'z'){
+            if((output[i] >= 'A' && output[i] <= 'Z') || (output[i] >= 'a' && output[i] <= 'z')){
                 char upperCase = toupper(output[i]);
                 decryptionText[i] = ((upperCase - 'A' - key + 26) % 26 + 'A');
         }
@@ -74,6 +78,16 @@ int main(){
         return 1;
     }
 
+    /** PATCH
+     * Intializes the pointers to null
+     * these contain garbage values so freeing them later would call undefined behavior
+     */
+    data->decryptedText = NULL;
+    data->encryptedText = NULL;
+    data->text = NULL;
+
+
+
     printf("\n\n\n***************************************");
     printf("\n*                                     *");
     printf("\n*       Message Portal (Online)       *");
@@ -93,8 +107,13 @@ int main(){
 
             if(scanf("%d", &userInput) != 1 || userInput < 1 || userInput > 3){
                 printf("\n Not a Valid Input.\n");
-                while(getchar() != '\n');
+                int c;
+                while((c = getchar()) != '\n' && c != EOF);
                 userInput = 0;
+            }
+            else{
+                int c;
+                while((c = getchar()) != '\n' && c != EOF);
             }
 
         } while(userInput == 0);
@@ -103,8 +122,19 @@ int main(){
         if(userInput == 1){
             printf("\nEnter Text: ");
             char tempArr[MAXSIZE];
-            scanf(" %[^\n]", tempArr);
+            scanf(" %999[^\n]", tempArr);
             int len = strlen(tempArr) + 1;
+
+            /**
+             * Free previous text/encryptedText before overwriting (avoid leak)
+             * Reset to NULL to avoid double-free later
+             */
+            free(data->text);
+            data->text = NULL;
+            free(data->encryptedText);
+            data->encryptedText = NULL;
+
+
             data->text = malloc(sizeof(char) * len);
             if(data->text == NULL){
                 printf("\nMemory Allocation Failed.\n");
@@ -117,7 +147,8 @@ int main(){
                 printf("\nEnter key: ");
                 if(scanf("%d", &data->key) != 1 || data->key < 1 || data->key > 25){
                     printf("\nInvalid key selection. Enter a number between 0 and 25.\n");
-                    while(getchar()!= '\n');
+                    int c;
+                    while((c = getchar()) != '\n' && c != EOF);
                     data->key = -1;
                 }
 
@@ -134,16 +165,26 @@ int main(){
             
         }
 
-        // User Option 2 
+        // User Option 2
         else if(userInput == 2){
             printf("\nEnter Encrypted Text: ");
             char tempArr[MAXSIZE];
-            scanf(" %[^\n]", tempArr);
+            scanf(" %999[^\n]", tempArr);
             int len = strlen(tempArr) + 1;
+
+            /**
+             *Free previous encryptedText/decryptedText before overwriting (avoid leak)
+             * reset to NULL to avoid double-free later
+             */
+            free(data->encryptedText);
+            data->encryptedText = NULL;
+            free(data->decryptedText);
+            data->decryptedText = NULL;
 
             data->encryptedText = malloc(len * sizeof(char));
             if(data->encryptedText == NULL){
                 printf("\nMemory Allocation Failed");
+                return 1;
             }
             strcpy(data->encryptedText, tempArr);
 
@@ -151,7 +192,8 @@ int main(){
                 printf("\nEnter Key: ");
                 if(scanf("%d", &data->key) != 1 || data->key < 0 || data->key > 25){
                     printf("\n Invalid key. Enter a number between 0 and 25.\n");
-                    while(getchar() != '\n');
+                    int c;
+                    while((c = getchar()) != '\n' && c != EOF);
                     data->key = -1;
                 }
 
@@ -159,7 +201,11 @@ int main(){
 
             len = strlen(data->encryptedText);
             data->decryptedText = decryption(data->encryptedText, len, data->key);
-            printf("DECYPTED TEXT: %s\n\n", data->decryptedText);
+            if(data->decryptedText == NULL){
+                printf("\nMemory Allocation Failed");
+                return 1;
+            }
+            printf("DECRYPTED TEXT: %s\n\n", data->decryptedText);
 
         }
 
