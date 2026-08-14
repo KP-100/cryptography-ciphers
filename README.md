@@ -8,7 +8,7 @@ All ciphers in this repository are a basic implementation focused for learning r
 
 
 Currently implemented:
-- [Vigenère Cipher](#Vigenère-Cipher-in-C) | [Caesar Cipher](#caesar-cipher-in-c) | [ROT13 Cipher](#ROT13-Cipher-in-C) | [XOR Cipher](#XOR-Cipher-in-C) | [Affine Cipher](#Affine-Cipher-in-C)
+- [Vigenère Cipher](#vigenère-cipher-in-c) | [Caesar Cipher](#caesar-cipher-in-c) | [ROT13 Cipher](#ROT13-Cipher-in-C) | [XOR Cipher](#XOR-Cipher-in-C) | [Affine Cipher](#Affine-Cipher-in-C)
 
 
 ---
