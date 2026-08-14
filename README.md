@@ -1,23 +1,34 @@
 # Cryptography Ciphers
 
-## Overview
-- This repository contains implementations of classical cryptography ciphers in **C**.
+## 🔍 Overview
+- This repository contains implementations of classical cryptography ciphers programmed in **C** and interactive UI based prototype.
 All ciphers in this repository are a basic implementation focused for learning rather than perfect production-grade ciphers.
 - Advanced C concpets have been implemented in Better filename versions. These concepts include DMA, Pointers, and Structs.
 - I am also open to any feedback / improvements / and new ideas!
 
 
 Currently implemented:
-- [Vigenère Cipher](#vigenère-cipher-in-c)
-- [Caesar Cipher](#caesar-cipher-in-c)
-- [ROT13 Cipher](#ROT13-Cipher-in-C)
-- [XOR Cipher](#XOR-Cipher-in-C)
-- [Affine Cipher](#Affine-Cipher-in-C)
+- [Vigenère Cipher](#vigenère-cipher-in-c) | [Caesar Cipher](#caesar-cipher-in-c) | [ROT13 Cipher](#ROT13-Cipher-in-C) | [XOR Cipher](#XOR-Cipher-in-C) | [Affine Cipher](#Affine-Cipher-in-C)
 
 
 ---
 
-## Vigenère Cipher in C
+## 🔒Live Prototype - Cipherkey
+**[Click here for the prototype](https://cipherkeyapp.figma.site/)**
+
+CipherKey is an interactive web app build for desktop and mobile devices from this repository's cipher logic.
+
+**Features:**
+- Choose from 5 cipher methods: **Vigenère, Caesar, ROT-13, Affine, and X0R**
+- Simple Encrypt and decrypt message flows
+- Minimal, clean, and distraction free UI
+- A visual, no-setup way to explore the algorithms - no compilation needed.
+<img width="310" height="369" alt="image" src="https://github.com/user-attachments/assets/f730cc21-4b52-461f-840a-1843254bcdfd" />
+
+
+
+
+## 🔒 Vigenère Cipher in C
 
 The **Vigenère Cipher** is a classical method of encrypting alphabetic text by using a keyword to shift letters. Each letter of the plaintext is shifted based on a corresponding letter of the keyword.
 
@@ -46,7 +57,7 @@ This program provides a simple and functional example of the Vigenère cipher, a
 
 ---
 
-## Caesar Cipher in C
+## 🔒 Caesar Cipher in C
 The **Caesar Cipher** is one of the simplest and most widely known encryption techniques. Each letter in the plaintext is shifted a fixed number of positions down the alphabet.
 
 This program provides a simple implementation in **C** that allows you to **encrypt** and **decrypt** text using a numeric key.
@@ -72,7 +83,7 @@ This program provides a simple implementation in **C** that allows you to **encr
 
 
 ---
-## ROT13 Cipher in C
+## 🔒 ROT13 Cipher in C
 
 The ROT13 Cipher is a simple substitution cipher that shifts each letter of the alphabet by 13 positions. Since the alphabet has 26 letters, applying ROT13 twice returns the original text.
 
@@ -102,7 +113,7 @@ This program provides a minimal implementation in C that allows you to "encrypt"
 - Plaintext = (Ciphertext[i] + ROT13) mod 26
 
 ---
-# XOR Cipher in C
+## 🔒 XOR Cipher in C
 
 The XOR Cipher is a simple method of encrypting text using the bitwise XOR operation.  
 Each character of the plaintext is XOR-ed with a corresponding character of the keyword (repeated as needed).
@@ -136,7 +147,7 @@ This program provides a simple and functional example of the XOR cipher, allowin
 
 ---
 
-# Affine Cipher in C
+# 🔒 Affine Cipher in C
 
 The **Affine Cipher** is a type of monoalphabetic substitution cipher that combines both **multiplicative** and **additive** transformations. Each letter in the plaintext is encrypted using two keys: a **key multiplier (`a`)** and a **key (`b`)**.
 
@@ -176,9 +187,7 @@ This program provides a simple and interactive implementation in **C**, allowing
 ---
 **Resources**
 - [Vigenere Cipher Wikipedia](https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher)
-- [Vigenere Cipher GeeksforGeeks](https://www.geeksforgeeks.org/dsa/vigenere-cipher/)
 - [Caesar Cipher Wikipedia](https://en.wikipedia.org/wiki/Caesar_cipher)
-- [Caesar Cipher Splunk](https://www.splunk.com/en_us/blog/learn/caesar-cipher.html)
 - [ROT13 Cipher Wikipedia](https://en.wikipedia.org/wiki/ROT13)
 - [XOR Cipher Wikipedia](https://en.wikipedia.org/wiki/XOR_cipher)
 - [Affine Cipher Wikipedia](https://en.wikipedia.org/wiki/Affine_cipher)
